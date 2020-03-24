@@ -71,7 +71,7 @@ export interface QueryRunner {
      * Releases used database connection.
      * You cannot use query runner methods after connection is released.
      */
-    release(): Promise<void>;
+    release(error?: any): Promise<void>;
 
     /**
      * Removes all tables from the currently connected database.
