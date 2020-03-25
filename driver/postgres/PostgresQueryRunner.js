@@ -81,6 +81,7 @@ var PostgresQueryRunner = /** @class */ (function (_super) {
             // will stick around in the pool indefinitely, breaking every
             // subsequent query that runs on it
             var removeFromPool = Boolean(error && error.severity === "FATAL");
+            console.log('In PostgresQueryRunner.release(error)...');
             this.releaseCallback(removeFromPool);
         }
         var index = this.driver.connectedQueryRunners.indexOf(this);

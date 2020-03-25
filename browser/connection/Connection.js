@@ -397,6 +397,7 @@ var Connection = /** @class */ (function () {
                     case 4: return [2 /*return*/, result];
                     case 5:
                         err_1 = _a.sent();
+                        console.log('In Connection.query()... inside catch... about to release(error) or throw an error');
                         if (!!queryRunner) return [3 /*break*/, 7];
                         return [4 /*yield*/, usedQueryRunner.release(err_1)];
                     case 6:
